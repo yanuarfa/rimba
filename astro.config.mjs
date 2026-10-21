@@ -10,6 +10,14 @@ export default defineConfig({
     // render-blocking request without creating a duplicate download.
     inlineStylesheets: 'always',
   },
+  vite: {
+    build: {
+      // Never inline assets as data URIs. Vite inlines anything under 4 KB,
+      // which turned one tiny font subset into a data: URL that the site's
+      // own CSP (font-src 'self') then blocked in production.
+      assetsInlineLimit: 0,
+    },
+  },
   image: {
     // The page photos live on Unsplash. Authorizing the host lets the
     // Image component download and optimize them at build time, so the
