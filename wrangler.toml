@@ -1,0 +1,13 @@
+# Rimba runs on Cloudflare Workers as a static-assets Worker:
+# no Worker script, Wrangler uploads the Astro build in dist/ as-is.
+name = "rimba"
+compatibility_date = "2026-10-21"
+
+[assets]
+directory = "./dist"
+
+# Custom domain, once the ursavior.my.id zone is on Cloudflare and the
+# canonical domain should move from the preview tunnel to Workers:
+# [[routes]]
+# pattern = "rimba.ursavior.my.id"
+# custom_domain = true

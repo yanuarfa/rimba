@@ -12,6 +12,8 @@ Built with [Astro](https://astro.build). The build output is plain static HTML a
 | `npm run dev` | Start the dev server |
 | `npm run build` | Build the static site into `dist/` |
 | `npm run preview` | Serve the built site locally |
+| `npm run dev:workers` | Build, then serve the site locally as a Cloudflare Worker |
+| `npm run deploy` | Build, then deploy to Cloudflare Workers |
 
 ## Structure
 
@@ -20,6 +22,19 @@ Built with [Astro](https://astro.build). The build output is plain static HTML a
 - `src/layouts/Base.astro` holds the document head: meta, Open Graph, canonical URL, and the NGO structured data
 - `src/styles/global.css` is the full stylesheet, organized by section
 - `src/scripts/engine.js` (bundled and minified by Astro) holds every interaction: scroll reveals, the contour progress line, the mobile menu, scrollspy, the counters, the seasonal hero fade, and the three Lottie animations (falling leaves, the form sprout, the stats burst)
+- `wrangler.toml` configures the Cloudflare Workers deployment (static assets only, no Worker script)
+- `public/_headers` sets the security headers (including the CSP) and the immutable cache rule for the hashed `/_astro/` files; Astro copies it into `dist/` on every build
+
+## Cloudflare Workers
+
+The site deploys to Cloudflare Workers as static assets: `wrangler deploy` uploads the contents of `dist/` and Workers serves them at the edge, with `public/_headers` applied to every response.
+
+```bash
+npm install
+npm run deploy        # builds first, then deploys
+```
+
+The first deploy asks you to log in to Cloudflare and publishes to `https://rimba.<your-subdomain>.workers.dev`. To serve the canonical domain from Workers instead, point the `ursavior.my.id` zone at Cloudflare and uncomment the `[[routes]]` block in `wrangler.toml`, then deploy again. The CSP in `public/_headers` carries sha256 hashes for the two inline blocks in `src/layouts/Base.astro`; if you edit those blocks, recompute their hashes from the built `dist/index.html` and update `_headers`, or the browser will block them.
 
 ## Notes
 

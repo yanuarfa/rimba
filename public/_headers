@@ -1,0 +1,20 @@
+# Security and cache headers for Cloudflare Workers static assets.
+# The two sha256 hashes in script-src belong to the inline blocks in
+# src/layouts/Base.astro (the 'jm' class script and the JSON-LD block).
+# If either block changes, recompute its hash from dist/index.html and
+# update it here, or the browser will refuse to run/read that block.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-YJ/dO/47TzP2byIfSY0fZ29MmD1NC2esceElVyHaR8s=' 'sha256-GHOCrcrcdNBotgar1rqN5u2bC5U9+gDDe99r2+EjOw4=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Cross-Origin-Opener-Policy: same-origin
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Astro emits content-hashed file names, so these never change in place.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.svg
+  Cache-Control: public, max-age=604800
