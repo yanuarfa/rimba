@@ -19,7 +19,7 @@ Built with [Astro](https://astro.build). The build output is plain static HTML a
 - `src/components/` holds one component per section (Header, Hero, Mission, Initiatives, About, FieldData, Newsletter, Contact, Footer) plus the ContourDivider between them
 - `src/layouts/Base.astro` holds the document head: meta, Open Graph, canonical URL, and the NGO structured data
 - `src/styles/global.css` is the full stylesheet, organized by section
-- `public/engine.js` holds every interaction: scroll reveals, the contour progress line, the mobile menu, scrollspy, the counters, the seasonal hero fade, and the three Lottie animations (falling leaves, the form sprout, the stats burst)
+- `src/scripts/engine.js` (bundled and minified by Astro) holds every interaction: scroll reveals, the contour progress line, the mobile menu, scrollspy, the counters, the seasonal hero fade, and the three Lottie animations (falling leaves, the form sprout, the stats burst)
 
 ## Notes
 
