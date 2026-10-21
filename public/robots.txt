@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rimba.ursavior.my.id/sitemap.xml

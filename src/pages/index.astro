@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Mission from '../components/Mission.astro';
+import Initiatives from '../components/Initiatives.astro';
+import ContourDivider from '../components/ContourDivider.astro';
+import About from '../components/About.astro';
+import FieldData from '../components/FieldData.astro';
+import Newsletter from '../components/Newsletter.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base>
+  <Header />
+  <main>
+    <Hero />
+    <Mission />
+    <Initiatives />
+    <ContourDivider d="M0,40 C180,12 400,56 620,30 C840,6 1030,46 1200,20" />
+    <About />
+    <FieldData />
+    <ContourDivider d="M0,24 C220,50 430,8 660,34 C880,56 1050,16 1200,38" />
+    <Newsletter />
+    <ContourDivider d="M0,34 C200,58 420,14 640,40 C850,60 1040,10 1200,28" />
+    <Contact />
+  </main>
+  <Footer />
+</Base>
