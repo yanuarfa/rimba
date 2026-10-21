@@ -11,13 +11,13 @@ html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#B4552D #F7F1E5
 ::-webkit-scrollbar-thumb{background:#B4552D;border-radius:99px;border:2px solid #F7F1E5}
 ::-webkit-scrollbar-thumb:hover{background:#96461F}
 html,body{overflow-x:clip}
-body{font-family:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif;background:var(--page);color:var(--main);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:"Plus Jakarta Sans Variable",system-ui,-apple-system,sans-serif;background:var(--page);color:var(--main);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
 section{scroll-margin-top:96px}
 .shell{max-width:var(--shell);margin:0 auto;padding:0 16px}
-h1,h2,h3{font-family:"Space Grotesk","Plus Jakarta Sans",sans-serif;line-height:1.15;letter-spacing:-.01em}
+h1,h2,h3{font-family:"Space Grotesk Variable","Plus Jakarta Sans Variable",sans-serif;line-height:1.15;letter-spacing:-.01em}
 h2{font-size:38px;font-weight:700}
 .green{color:var(--forest)}
 .badge{display:inline-flex;align-items:center;gap:8px;background:var(--sage);color:var(--forest-deep);font-weight:700;font-size:12px;letter-spacing:.08em;padding:8px 14px;border-radius:999px}
@@ -31,9 +31,9 @@ h2{font-size:38px;font-weight:700}
 .btn-ghost:hover{color:var(--forest)}
 
 /* Header */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,253,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(51,36,28,.07)}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,253,248,.97);border-bottom:1px solid rgba(51,36,28,.07)}
 .header-inner{max-width:var(--shell);margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:28px}
-.logo{display:inline-flex;align-items:center;gap:9px;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--main)}
+.logo{display:inline-flex;align-items:center;gap:9px;font-family:"Space Grotesk Variable",sans-serif;font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--main)}
 .logo svg{width:29px;height:29px}
 .main-nav{margin-inline:auto}
 .main-nav ul{display:flex;gap:30px}
@@ -100,7 +100,7 @@ h2{font-size:38px;font-weight:700}
 .stats-bar dl{display:grid;grid-template-columns:repeat(4,1fr)}
 .stat{padding:24px 16px;text-align:center}
 .stat + .stat{border-left:1px solid var(--line)}
-.stat dd{font-family:"Space Grotesk",sans-serif;font-size:32px;font-weight:700;color:var(--forest);line-height:1.1;letter-spacing:-.01em}
+.stat dd{font-family:"Space Grotesk Variable",sans-serif;font-size:32px;font-weight:700;color:var(--forest);line-height:1.1;letter-spacing:-.01em}
 .stat dt{margin-top:4px;color:var(--muted);font-size:14px;font-weight:500}
 
 /* Sections */
@@ -138,7 +138,7 @@ h2{font-size:38px;font-weight:700}
 .how-rail .rail-sub{margin-top:6px;font-size:14px;color:var(--muted)}
 .step{display:flex;gap:16px;padding:16px 0}
 .step + .step{border-top:1px solid var(--line)}
-.step .num{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:20px;color:var(--forest);line-height:1.2;flex:none;width:34px}
+.step .num{font-family:"Space Grotesk Variable",sans-serif;font-weight:700;font-size:20px;color:var(--forest);line-height:1.2;flex:none;width:34px}
 .step h4{font-size:15.5px;font-weight:700}
 .step p{margin-top:3px;font-size:13.5px;color:var(--muted);line-height:1.55}
 
@@ -150,16 +150,27 @@ h2{font-size:38px;font-weight:700}
 .news-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity var(--dur-5) var(--ease)}
 .news-photo img.ok{opacity:1}
 .photo-cap{position:absolute;left:14px;bottom:14px;z-index:2;background:rgba(255,253,248,.92);color:var(--main);font-size:12.5px;font-weight:600;padding:8px 13px;border-radius:99px}
-.hero-lottie{position:absolute;left:0;right:0;top:0;height:64%;z-index:2;pointer-events:none}
-.ok-lottie{display:none;width:26px;height:26px;vertical-align:-7px;margin-right:3px}
-.form-msg.ok .ok-lottie{display:inline-block}
-@media (prefers-reduced-motion: reduce){.hero-lottie,.burst-lottie{display:none}}
+.hero-leaves{position:absolute;left:0;right:0;top:0;height:64%;z-index:2;pointer-events:none;overflow:hidden}
+.hero-leaves .leaf{position:absolute;top:-9%;width:13px;height:20px;background:var(--forest);border-radius:100% 0 100% 0;opacity:0;animation:leafFall 8s linear infinite}
+.hero-leaves .leaf-a{left:24%;animation-delay:-1.5s}
+.hero-leaves .leaf-b{left:55%;width:10px;height:16px;background:var(--forest-deep);animation-duration:10s;animation-delay:-6s}
+.hero-leaves .leaf-c{left:76%;width:15px;height:23px;background:#7A4A21;animation-duration:9s;animation-delay:-4s}
+@keyframes leafFall{0%{opacity:0;transform:translate3d(0,-20px,0) rotate(12deg)}12%{opacity:.85}55%{transform:translate3d(-34px,190px,0) rotate(150deg)}88%{opacity:.75}100%{opacity:0;transform:translate3d(18px,360px,0) rotate(290deg)}}
+.ok-sprout{display:none;width:22px;height:22px;vertical-align:-6px;margin-right:5px;color:var(--forest)}
+.ok-sprout svg{width:100%;height:100%}
+.form-msg.ok .ok-sprout{display:inline-block;animation:sproutIn .35s var(--ease)}
+@keyframes sproutIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion: reduce){.hero-leaves,.burst{display:none}}
 .contour-divider{width:min(1120px,92%);margin:2px auto -4px}
 .contour-divider svg{display:block;width:100%;height:44px}
 .contour-divider path{fill:none;stroke:var(--forest);stroke-width:2;stroke-linecap:round;opacity:.38}
 .jm .contour-divider path{stroke-dasharray:100;stroke-dashoffset:100}
 .jm .contour-divider.in path{stroke-dashoffset:0;transition:stroke-dashoffset var(--dur-6) var(--ease) .15s}
-.burst-lottie{position:absolute;left:0;right:0;top:-46px;height:150px;pointer-events:none;z-index:3}
+.burst{position:absolute;left:50%;top:-14px;pointer-events:none;z-index:3}
+.burst span{position:absolute;width:11px;height:17px;background:var(--forest);border-radius:100% 0 100% 0;opacity:0}
+.burst span:nth-child(even){background:var(--forest-deep)}
+.burst.play span{animation:burstLeaf 1.25s var(--ease) forwards;animation-delay:var(--delay,0s)}
+@keyframes burstLeaf{0%{opacity:0;transform:translate(0,0) rotate(0deg) scale(.5)}15%{opacity:.95}100%{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(1)}}
 .mobile-menu a::after{content:"";position:absolute;left:12px;bottom:6px;height:2px;width:34px;border-radius:2px;background:var(--forest);transform:scaleX(0);transform-origin:left;transition:transform var(--dur-3) var(--ease)}
 .mobile-menu a.active::after{transform:scaleX(1)}
 .news-body{padding:44px}
@@ -198,16 +209,20 @@ h2{font-size:38px;font-weight:700}
 
 /* Motion system (motion-design skill). Personality: Premium / Calm.
    Signature ease: cubic-bezier(.22,.61,.21,1). Durations: 160 / 520 / 950ms.
-   Genjutsu cast, variant B "Jejak Kontur": sections surface through fog
-   (blur + rise), contour icons draw themselves on arrival, initiative
+   Genjutsu cast, variant B "Jejak Kontur": sections surface with a
+   rise, contour icons draw themselves on arrival, initiative
    images clear ground-up behind a sliding curtain, a clay line under the header
    traces scroll progress, primary buttons drift magnetically (fine
    pointers only). Body text, forms and the footer stay still. */
 :root{--ease:cubic-bezier(.22,.61,.21,1);--dur-1:.16s;--dur-2:.24s;--dur-3:.32s;--dur-4:.52s;--dur-5:.8s;--dur-6:1s}
 [data-rv]{--d:0s}
-.jm [data-rv]{opacity:0;transform:translateY(26px);filter:blur(6px)}
+.jm [data-rv]{opacity:0;transform:translateY(26px)}
 .jm [data-rv="pop"]{transform:translateY(14px) scale(.94)}
-.jm [data-rv].in{opacity:1;transform:none;filter:blur(0);transition:opacity var(--dur-4) var(--ease) var(--d),transform var(--dur-4) var(--ease) var(--d),filter var(--dur-4) var(--ease) var(--d)}
+.jm [data-rv].in{opacity:1;transform:none;transition:opacity var(--dur-4) var(--ease) var(--d),transform var(--dur-4) var(--ease) var(--d)}
+/* The hero is the first paint and the LCP surface, so it is never held
+   behind a JavaScript reveal state. Reveal motion starts below the fold. */
+.hero [data-rv]{opacity:1;transform:none}
+.hero [data-rv].in{transition:none}
 .btn{transition:background var(--dur-1) var(--ease),color var(--dur-1) var(--ease),transform var(--dur-1) var(--ease)}
 .btn:active{transform:scale(.97)}
 .main-nav a{position:relative}
@@ -227,17 +242,19 @@ h2{font-size:38px;font-weight:700}
 .prog-row:hover{background:var(--sage)}
 .learn span{transition:transform var(--dur-2) var(--ease)}
 .learn:hover span{transform:translateX(3px)}
-.logo .draw path{stroke-dasharray:100;stroke-dashoffset:100;animation:drawArc 1s var(--ease) .15s forwards}
-.logo .draw circle{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:dotPop .45s var(--ease) .85s forwards}
-@keyframes drawArc{to{stroke-dashoffset:0}}
+.logo .draw path{opacity:.25;transform:translateY(3px);animation:logoIn .5s var(--ease) forwards}
+.logo .draw path:nth-of-type(2){animation-delay:.08s}
+.logo .draw path:nth-of-type(3){animation-delay:.16s}
+.logo .draw circle{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:dotPop .45s var(--ease) .3s forwards}
+@keyframes logoIn{to{opacity:1;transform:translateY(0)}}
 @keyframes dotPop{to{transform:scale(1)}}
 /* Contour badge icons draw themselves when their section arrives */
 .jm .badge svg{opacity:0;transform:translateY(3px)}
 .jm .badge[data-rv].in svg,.jm [data-rv].in .badge svg{opacity:1;transform:none;transition:opacity var(--dur-3) var(--ease) .2s,transform var(--dur-3) var(--ease) .2s}
 /* Hero headline rises through line masks, once, on load */
 .lm{display:block;overflow:hidden}
-.jm .lm>span{display:block;transform:translateY(110%);transition:transform var(--dur-5) var(--ease);transition-delay:var(--ld,0s)}
-.jm.go .lm>span{transform:translateY(0)}
+.jm .lm>span{display:block;transform:translateY(110%);animation:lineUp var(--dur-5) var(--ease) forwards;animation-delay:var(--ld,0s)}
+@keyframes lineUp{to{transform:translateY(0)}}
 /* Mission images settle from a slight zoom as the fog lifts */
 .jm [data-rv].in.focus-card>img{animation:fcSettle .9s var(--ease)}
 @keyframes fcSettle{from{transform:scale(1.12)}to{transform:scale(1)}}
@@ -247,8 +264,9 @@ h2{font-size:38px;font-weight:700}
 /* Scroll progress traced as a contour line under the header */
 .progress{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--forest);transform:scaleX(0);transform-origin:0 50%}
 :focus-visible{outline:2px solid var(--forest);outline-offset:2px}
-.ph-forest{animation:kenburns 30s ease-in-out infinite alternate}
-@keyframes kenburns{from{transform:scale(1) translate(0,0)}to{transform:scale(1.07) translate(-1.2%,-1.5%)}}
+/* No Ken Burns on the hero photo: a continuously rescaling LCP element
+   keeps re-registering as a new largest paint, so the photo stays still
+   and only the leaves above it move. */
 form.shake{animation:shake .35s ease-in-out}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
 
@@ -257,7 +275,7 @@ form.shake{animation:shake .35s ease-in-out}
 .story p{color:var(--muted);font-size:16.5px;line-height:1.65;margin-bottom:16px}
 .story p strong{color:var(--main)}
 .quote-card{margin-top:26px;background:var(--lime);border-radius:20px;padding:26px 28px}
-.quote-card blockquote{font-family:"Space Grotesk",sans-serif;font-size:21px;font-weight:600;line-height:1.4;color:var(--main)}
+.quote-card blockquote{font-family:"Space Grotesk Variable",sans-serif;font-size:21px;font-weight:600;line-height:1.4;color:var(--main)}
 .quote-card figcaption{margin-top:14px;font-size:13.5px;color:var(--forest-deep);font-weight:700;letter-spacing:.02em}
 .tl{position:relative;padding-left:30px}
 .tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line);border-radius:2px}
@@ -267,7 +285,7 @@ form.shake{animation:shake .35s ease-in-out}
 .tl-item{position:relative;padding-bottom:24px}
 .tl-item:last-child{padding-bottom:0}
 .tl-dot{position:absolute;left:-30px;top:3px;width:16px;height:16px;border-radius:50%;background:var(--forest);border:3px solid var(--page)}
-.tl-year{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:15px;color:var(--forest-deep)}
+.tl-year{font-family:"Space Grotesk Variable",sans-serif;font-weight:700;font-size:15px;color:var(--forest-deep)}
 .tl-item h3{font-size:16.5px;margin:2px 0 4px}
 .tl-item p{color:var(--muted);font-size:14.5px;line-height:1.55}
 
@@ -338,7 +356,7 @@ form.shake{animation:shake .35s ease-in-out}
 .team{margin-top:46px;border-top:1px solid var(--line);padding-top:28px}
 .team-h{font-size:20px;margin-bottom:18px}
 .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px;list-style:none}
-.team-grid strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:16.5px}
+.team-grid strong{display:block;font-family:"Space Grotesk Variable",sans-serif;font-size:16.5px}
 .team-grid span{color:var(--muted);font-size:14px;line-height:1.5;display:block;margin-top:2px}
 
 /* Newsletter issues */
@@ -412,6 +430,6 @@ form.shake{animation:shake .35s ease-in-out}
   .jm .tl-fill{transform:none}
   .jm .bar-fill{transform:none}
   .progress{display:none}
-  .logo .draw path{stroke-dashoffset:0}
+  .logo .draw path{opacity:1;transform:none}
   .logo .draw circle{transform:none}
 }

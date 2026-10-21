@@ -4,7 +4,7 @@
 # If either block changes, recompute its hash from dist/index.html and
 # update it here, or the browser will refuse to run/read that block.
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-YJ/dO/47TzP2byIfSY0fZ29MmD1NC2esceElVyHaR8s=' 'sha256-GHOCrcrcdNBotgar1rqN5u2bC5U9+gDDe99r2+EjOw4=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-YJ/dO/47TzP2byIfSY0fZ29MmD1NC2esceElVyHaR8s=' 'sha256-GHOCrcrcdNBotgar1rqN5u2bC5U9+gDDe99r2+EjOw4='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY

@@ -5,6 +5,11 @@ import { defineConfig } from 'astro/config';
 // canonical URLs and sitemap.xml read from it.
 export default defineConfig({
   site: 'https://rimba.ursavior.my.id',
+  build: {
+    // This is a single-page site, so inlining its one stylesheet removes a
+    // render-blocking request without creating a duplicate download.
+    inlineStylesheets: 'always',
+  },
   image: {
     // The page photos live on Unsplash. Authorizing the host lets the
     // Image component download and optimize them at build time, so the

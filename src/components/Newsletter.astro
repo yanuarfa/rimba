@@ -5,7 +5,7 @@ import { Image } from 'astro:assets';
     <div class="news-split" data-rv>
       <div class="news-photo">
         <svg class="np-fallback" viewBox="0 0 256 256" aria-hidden="true"><g fill="none" stroke="#B4552D" stroke-width="10" stroke-linecap="round"><path d="M26 196 C58 112 94 84 128 84 C162 84 198 112 230 196"/><path d="M52 196 C76 140 100 118 128 118 C156 118 180 140 204 196"/><path d="M78 196 C92 162 108 148 128 148 C148 148 164 162 178 196"/></g><circle cx="128" cy="46" r="15" fill="#33241C"/></svg>
-        <Image src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=1200&auto=format&fit=crop" alt="Morning light coming through forest leaves" width={1000} height={667} widths={[600, 1000]} sizes="(max-width: 1020px) 100vw, 570px" loading="lazy" onload="this.classList.add('ok')" onerror="this.remove()" />
+        <Image src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=1200&auto=format&fit=crop" alt="Morning light coming through forest leaves" width={1000} height={667} widths={[400, 600, 800, 1000]} sizes="(max-width: 1020px) calc(100vw - 32px), 570px" loading="lazy" format="webp" quality={55} onload="this.classList.add('ok')" onerror="this.remove()" />
         <p class="photo-cap">Morning in the Kubu Raya peat forest</p>
       </div>
       <div class="news-body">
@@ -16,7 +16,7 @@ import { Image } from 'astro:assets';
           <input type="email" id="newsEmail" name="email" placeholder="Your email address" autocomplete="email" required>
           <button type="submit" class="btn btn-forest">Subscribe <span aria-hidden="true">→</span></button>
         </form>
-        <p class="form-msg" id="newsMsg" role="status" aria-live="polite" style="min-height:0"><span class="ok-lottie" aria-hidden="true"></span><span class="msg-txt"></span></p>
+        <p class="form-msg" id="newsMsg" role="status" aria-live="polite" style="min-height:0"><span class="ok-sprout" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-3.4-2.4-5.2-6.2-5.2 0 3.7 2.4 5.5 6.2 5.2Z"/><path d="M12 13c0-3.4 2.4-5.2 6.2-5.2 0 3.7-2.4 5.5-6.2 5.2Z"/></svg></span><span class="msg-txt"></span></p>
         <div class="news-join">
           <div class="avatars" aria-hidden="true"><span>AR</span><span class="a2">JM</span><span class="a3">KT</span></div>
           <p>3,240 subscribers, most of them in the districts we work in</p>

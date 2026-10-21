@@ -16,31 +16,31 @@ import { Image } from 'astro:assets';
             <input type="email" id="heroEmail" name="email" placeholder="Your email address" autocomplete="email" required>
             <button type="submit" class="btn btn-forest mag">Join Us <span aria-hidden="true">→</span></button>
           </form>
-          <p class="form-msg" id="heroMsg" role="status" aria-live="polite"><span class="ok-lottie" aria-hidden="true"></span><span class="msg-txt"></span></p>
+          <p class="form-msg" id="heroMsg" role="status" aria-live="polite"><span class="ok-sprout" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-3.4-2.4-5.2-6.2-5.2 0 3.7 2.4 5.5 6.2 5.2Z"/><path d="M12 13c0-3.4 2.4-5.2 6.2-5.2 0 3.7-2.4 5.5-6.2 5.2Z"/></svg></span><span class="msg-txt"></span></p>
           <div class="join-row" data-rv style="--d:.32s">
             <div class="avatars" aria-hidden="true"><span>AR</span><span class="a2">JM</span><span class="a3">KT</span></div>
             <p><strong>3,240 people</strong> read our monthly field report</p>
           </div>
         </div>
         <div class="hero-photo" data-rv="pop" style="--d:.15s">
-          <Image class="ph-forest" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop" alt="" aria-hidden="true" width={1600} height={1067} widths={[800, 1200, 1600]} sizes="(max-width: 1020px) 100vw, 700px" loading="eager" fetchpriority="high" />
-          <Image class="ph-dry" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="" aria-hidden="true" width={800} height={533} widths={[400, 700]} sizes="(max-width: 1020px) 44vw, 310px" loading="eager" />
+          <Image class="ph-forest" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop" alt="" aria-hidden="true" width={1600} height={1067} widths={[640, 720, 960, 1280, 1600]} sizes="(max-width: 1020px) calc(100vw - 32px), 700px" loading="eager" fetchpriority="high" decoding="sync" format="webp" quality={55} />
+          <Image class="ph-dry" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="" aria-hidden="true" width={800} height={533} widths={[200, 320, 480, 700]} sizes="(max-width: 1020px) 42vw, 310px" loading="eager" format="webp" quality={55} />
           <a class="watch-chip" href="#mission" aria-label="Watch a planting day, go to our mission" data-rv="pop" style="--d:.55s">
             <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5Z"/></svg></span>
             <span class="txt">Watch a Planting Day</span>
           </a>
-          <div class="hero-lottie" id="heroLottie" aria-hidden="true"></div>
+          <div class="hero-leaves" aria-hidden="true"><span class="leaf leaf-a"></span><span class="leaf leaf-b"></span><span class="leaf leaf-c"></span></div>
           <div class="prog-card" data-rv style="--d:.45s">
             <div class="prog-row">
-              <Image src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=400&auto=format&fit=crop" alt="Hands holding a young seedling" width={200} height={200} widths={[100, 200]} sizes="46px" loading="lazy" />
+              <Image src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=400&auto=format&fit=crop" alt="Hands holding a young seedling" width={200} height={200} widths={[92, 138, 200]} sizes="46px" loading="lazy" format="webp" quality={55} />
               <div><h2>Peatland Rewetting</h2><p>Blocking drainage canals in Kubu Raya.</p></div>
             </div>
             <div class="prog-row">
-              <Image src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?q=80&w=400&auto=format&fit=crop" alt="A sea turtle swimming over a reef" width={200} height={200} widths={[100, 200]} sizes="46px" loading="lazy" />
+              <Image src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?q=80&w=400&auto=format&fit=crop" alt="A sea turtle swimming over a reef" width={200} height={200} widths={[92, 138, 200]} sizes="46px" loading="lazy" format="webp" quality={55} />
               <div><h2>Mangrove Planting</h2><p>Restoring the eroding Demak coast.</p></div>
             </div>
             <div class="prog-row">
-              <Image src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=400&auto=format&fit=crop" alt="A tiger resting in tall grass" width={200} height={200} widths={[100, 200]} sizes="46px" loading="lazy" />
+              <Image src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=400&auto=format&fit=crop" alt="A tiger resting in tall grass" width={200} height={200} widths={[92, 138, 200]} sizes="46px" loading="lazy" format="webp" quality={55} />
               <div><h2>Village Patrols</h2><p>Rangers guarding 9,412 ha of forest.</p></div>
             </div>
           </div>
@@ -49,7 +49,7 @@ import { Image } from 'astro:assets';
 
       <!-- Stats -->
       <div class="stats-bar" data-rv>
-          <div class="burst-lottie" id="burstLottie" aria-hidden="true"></div>
+          <div class="burst" id="burst" aria-hidden="true"><span style="--x:-250px;--y:-46px;--r:-150deg;--delay:0s"></span><span style="--x:-170px;--y:-72px;--r:120deg;--delay:.05s"></span><span style="--x:-95px;--y:-40px;--r:-90deg;--delay:.1s"></span><span style="--x:-30px;--y:-78px;--r:170deg;--delay:.03s"></span><span style="--x:40px;--y:-52px;--r:-120deg;--delay:.08s"></span><span style="--x:110px;--y:-76px;--r:90deg;--delay:.13s"></span><span style="--x:185px;--y:-42px;--r:-170deg;--delay:.06s"></span><span style="--x:255px;--y:-64px;--r:140deg;--delay:.11s"></span></div>
         <dl>
           <div class="stat"><dd data-count="187450" data-suffix="">187,450</dd><dt>Trees and mangroves planted since 2019</dt></div>
           <div class="stat"><dd data-count="64" data-suffix="">64</dd><dt>Village agreements signed</dt></div>
