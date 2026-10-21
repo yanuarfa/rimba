@@ -5,4 +5,10 @@ import { defineConfig } from 'astro/config';
 // canonical URLs and sitemap.xml read from it.
 export default defineConfig({
   site: 'https://rimba.ursavior.my.id',
+  image: {
+    // The page photos live on Unsplash. Authorizing the host lets the
+    // Image component download and optimize them at build time, so the
+    // built site serves its own resized copies instead of hot-linking.
+    remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
+  },
 });

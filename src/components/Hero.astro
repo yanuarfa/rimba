@@ -1,4 +1,7 @@
-  <section class="hero">
+---
+import { Image } from 'astro:assets';
+---
+<section class="hero">
     <div class="shell">
       <div class="hero-grid">
         <div>
@@ -20,8 +23,8 @@
           </div>
         </div>
         <div class="hero-photo" data-rv="pop" style="--d:.15s">
-          <div class="ph-forest" aria-hidden="true"></div>
-          <div class="ph-dry" aria-hidden="true"></div>
+          <Image class="ph-forest" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop" alt="" aria-hidden="true" width={1600} height={1067} widths={[800, 1200, 1600]} sizes="(max-width: 1020px) 100vw, 700px" loading="eager" fetchpriority="high" />
+          <Image class="ph-dry" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="" aria-hidden="true" width={800} height={533} widths={[400, 700]} sizes="(max-width: 1020px) 44vw, 310px" loading="eager" />
           <a class="watch-chip" href="#mission" aria-label="Watch a planting day, go to our mission" data-rv="pop" style="--d:.55s">
             <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5Z"/></svg></span>
             <span class="txt">Watch a Planting Day</span>
@@ -29,15 +32,15 @@
           <div class="hero-lottie" id="heroLottie" aria-hidden="true"></div>
           <div class="prog-card" data-rv style="--d:.45s">
             <div class="prog-row">
-              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=100&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=100&auto=format&fit=crop 100w, https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=200&auto=format&fit=crop 200w" sizes="46px" width="46" height="46" alt="Hands holding a young seedling" loading="lazy">
+              <Image src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=400&auto=format&fit=crop" alt="Hands holding a young seedling" width={200} height={200} widths={[100, 200]} sizes="46px" loading="lazy" />
               <div><h2>Peatland Rewetting</h2><p>Blocking drainage canals in Kubu Raya.</p></div>
             </div>
             <div class="prog-row">
-              <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?q=80&w=100&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?q=80&w=100&auto=format&fit=crop 100w, https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?q=80&w=200&auto=format&fit=crop 200w" sizes="46px" width="46" height="46" alt="A sea turtle swimming over a reef" loading="lazy">
+              <Image src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?q=80&w=400&auto=format&fit=crop" alt="A sea turtle swimming over a reef" width={200} height={200} widths={[100, 200]} sizes="46px" loading="lazy" />
               <div><h2>Mangrove Planting</h2><p>Restoring the eroding Demak coast.</p></div>
             </div>
             <div class="prog-row">
-              <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=100&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=100&auto=format&fit=crop 100w, https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=200&auto=format&fit=crop 200w" sizes="46px" width="46" height="46" alt="A tiger resting in tall grass" loading="lazy">
+              <Image src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=400&auto=format&fit=crop" alt="A tiger resting in tall grass" width={200} height={200} widths={[100, 200]} sizes="46px" loading="lazy" />
               <div><h2>Village Patrols</h2><p>Rangers guarding 9,412 ha of forest.</p></div>
             </div>
           </div>

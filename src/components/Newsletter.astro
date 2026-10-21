@@ -1,8 +1,11 @@
-  <section class="section shell" id="involved">
+---
+import { Image } from 'astro:assets';
+---
+<section class="section shell" id="involved">
     <div class="news-split" data-rv>
       <div class="news-photo">
         <svg class="np-fallback" viewBox="0 0 256 256" aria-hidden="true"><g fill="none" stroke="#B4552D" stroke-width="10" stroke-linecap="round"><path d="M26 196 C58 112 94 84 128 84 C162 84 198 112 230 196"/><path d="M52 196 C76 140 100 118 128 118 C156 118 180 140 204 196"/><path d="M78 196 C92 162 108 148 128 148 C148 148 164 162 178 196"/></g><circle cx="128" cy="46" r="15" fill="#33241C"/></svg>
-        <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=800&auto=format&fit=crop" srcset="https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=600&auto=format&fit=crop 600w, https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=1000&auto=format&fit=crop 1000w" sizes="(max-width: 1020px) 100vw, 570px" alt="Morning light coming through forest leaves" loading="lazy" onload="this.classList.add('ok')" onerror="this.remove()">
+        <Image src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=1200&auto=format&fit=crop" alt="Morning light coming through forest leaves" width={1000} height={667} widths={[600, 1000]} sizes="(max-width: 1020px) 100vw, 570px" loading="lazy" onload="this.classList.add('ok')" onerror="this.remove()" />
         <p class="photo-cap">Morning in the Kubu Raya peat forest</p>
       </div>
       <div class="news-body">
